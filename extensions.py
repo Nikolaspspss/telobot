@@ -1,7 +1,7 @@
-import telebot
+
 import json
 import requests
-from Config import keys
+from config import keys
 
 
 class ConvertionException(Exception):
@@ -30,6 +30,9 @@ class CryptoConverter:
             raise ConvertionException(f'Не удалось обработать колчиество {amount}')
 
         r = requests.get(f'https://min-api.cryptocompare.com/data/price?fsym={quote_ticker}&tsyms={base_ticker}')
+
         total_base = json.loads(r.content)[keys[base]]
 
-        return total_base
+        total_base1 = total_base*amount
+
+        return total_base1
