@@ -8,6 +8,7 @@ from extensions import ConvertionException, CryptoConverter
 bot = telebot.TeleBot(TOKEN)
 
 
+
 @bot.message_handler(commands=['start', 'help'])
 def help(message: telebot.types.Message):
     text = 'Чтобы начать работу введите команду боту в следующем формате: \n<имя валюты>\
