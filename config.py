@@ -5,4 +5,4 @@ keys = {'евро': 'EUR',
         'юань': 'UAH'
         }
 
-TOKEN = ''
+TOKEN = '111'
